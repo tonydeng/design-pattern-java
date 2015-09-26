@@ -1,5 +1,8 @@
 package com.github.tonydeng.desgin.visitor;
 
+import com.github.tonydeng.desgin.visitor.client.ShoppingCartClient;
+import com.github.tonydeng.desgin.visitor.item.Book;
+import com.github.tonydeng.desgin.visitor.item.Fruit;
 import com.google.common.collect.Lists;
 import org.junit.Assert;
 import org.junit.Test;

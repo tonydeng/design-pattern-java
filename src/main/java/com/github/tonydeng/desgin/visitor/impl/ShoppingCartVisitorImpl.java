@@ -1,5 +1,8 @@
-package com.github.tonydeng.desgin.visitor;
+package com.github.tonydeng.desgin.visitor.impl;
 
+import com.github.tonydeng.desgin.visitor.item.Book;
+import com.github.tonydeng.desgin.visitor.item.Fruit;
+import com.github.tonydeng.desgin.visitor.ShoppingCartVisitor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
