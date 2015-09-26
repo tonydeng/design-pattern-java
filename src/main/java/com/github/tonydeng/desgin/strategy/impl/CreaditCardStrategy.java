@@ -15,7 +15,7 @@ public class CreaditCardStrategy implements PaymentStrategy {
     private String cvv;
     private String dateOfExpiry;
 
-    public CreaditCardStrategy(String nm, String ccNum, String cvv, String expiryDate){
+    public CreaditCardStrategy(String nm, String ccNum, String cvv, String expiryDate) {
         this.name = nm;
         this.cardNumber = ccNum;
         this.cvv = cvv;
@@ -24,6 +24,6 @@ public class CreaditCardStrategy implements PaymentStrategy {
 
     @Override
     public void pay(int amount) {
-        log.info("{} paid with credit/debit card",amount);
+        log.info("{} paid with credit/debit card by {}", amount, name);
     }
 }
