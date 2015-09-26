@@ -10,6 +10,7 @@ public class ShoppingCartVisitorImpl implements ShoppingCartVisitor {
     private static final Logger log = LoggerFactory.getLogger(ShoppingCartVisitorImpl.class);
 
     /**
+     * 单本书成交价
      *
      * @param book
      * @return
@@ -23,8 +24,17 @@ public class ShoppingCartVisitorImpl implements ShoppingCartVisitor {
         } else {
             cost = book.getPrice();
         }
-        if (log.isInfoEnabled())
-            log.info("Boook ISDN::{} cost={}", book.getIsbnNumber(), cost);
+        if (log.isDebugEnabled())
+            log.debug("Boook ISDN::{} cost={}", book.getIsbnNumber(), cost);
+        return cost;
+    }
+
+    @Override
+    public int visit(Fruit fruit) {
+        int cost = fruit.getPricePerKg() * fruit.getWeight();
+        if (log.isDebugEnabled())
+            log.debug("{} cost={}", fruit.getName(), cost);
+
         return cost;
     }
 }

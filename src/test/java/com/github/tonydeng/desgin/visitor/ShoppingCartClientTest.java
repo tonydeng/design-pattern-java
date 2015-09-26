@@ -13,7 +13,7 @@ import java.util.List;
  */
 public class ShoppingCartClientTest {
     private static final Logger log = LoggerFactory.getLogger(ShoppingCartClientTest.class);
-    private ShoppingCartClient client = new ShoppingCartClient();
+    private ShoppingCartClient shoppingCart = new ShoppingCartClient();
 
     @Test
     public void testBookCalculatePrice() {
@@ -21,10 +21,24 @@ public class ShoppingCartClientTest {
                 new Book(20, "1234"),
                 new Book(100, "5678")
         );
-        int total = client.calculatePrice(items);
+        int total = shoppingCart.calculatePrice(items);
 
-        log.info("total:{}", total);
+        log.info("books total:{}", total);
 
         Assert.assertTrue("计算错误", total == (95 + 20));
+    }
+
+    @Test
+    public void testFruitCalculatePrice() {
+        List<ItemElement> items = Lists.newArrayList(
+                new Fruit(10, 2, "Banana"),
+                new Fruit(5, 5, "Apple")
+        );
+
+        int total = shoppingCart.calculatePrice(items);
+
+        log.info("fruit total:{}", total);
+
+        Assert.assertTrue("计算错误", total == (10 * 2 + 5 * 5));
     }
 }

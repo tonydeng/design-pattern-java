@@ -5,4 +5,5 @@ package com.github.tonydeng.desgin.visitor;
  */
 public interface ShoppingCartVisitor {
     int visit(Book book);
+    int visit(Fruit fruit);
 }
