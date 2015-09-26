@@ -1,4 +1,8 @@
-package com.github.tonydeng.desgin.visitor;
+package com.github.tonydeng.desgin.visitor.client;
+
+import com.github.tonydeng.desgin.visitor.ItemElement;
+import com.github.tonydeng.desgin.visitor.ShoppingCartVisitor;
+import com.github.tonydeng.desgin.visitor.impl.ShoppingCartVisitorImpl;
 
 import java.util.List;
 

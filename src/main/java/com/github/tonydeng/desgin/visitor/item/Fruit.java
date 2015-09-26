@@ -1,4 +1,7 @@
-package com.github.tonydeng.desgin.visitor;
+package com.github.tonydeng.desgin.visitor.item;
+
+import com.github.tonydeng.desgin.visitor.ItemElement;
+import com.github.tonydeng.desgin.visitor.ShoppingCartVisitor;
 
 /**
  * Created by tonydeng on 15/9/26.
