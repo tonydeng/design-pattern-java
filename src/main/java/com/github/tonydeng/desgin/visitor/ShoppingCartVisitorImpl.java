@@ -29,6 +29,11 @@ public class ShoppingCartVisitorImpl implements ShoppingCartVisitor {
         return cost;
     }
 
+    /**
+     * 水果价格计算
+     * @param fruit
+     * @return
+     */
     @Override
     public int visit(Fruit fruit) {
         int cost = fruit.getPricePerKg() * fruit.getWeight();
