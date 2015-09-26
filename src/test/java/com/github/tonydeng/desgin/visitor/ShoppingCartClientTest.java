@@ -1,5 +1,6 @@
 package com.github.tonydeng.desgin.visitor;
 
+import com.github.tonydeng.desgin.BaseTest;
 import com.github.tonydeng.desgin.visitor.client.ShoppingCartClient;
 import com.github.tonydeng.desgin.visitor.item.Book;
 import com.github.tonydeng.desgin.visitor.item.Fruit;
@@ -14,8 +15,7 @@ import java.util.List;
 /**
  * Created by tonydeng on 15/9/26.
  */
-public class ShoppingCartClientTest {
-    private static final Logger log = LoggerFactory.getLogger(ShoppingCartClientTest.class);
+public class ShoppingCartClientTest extends BaseTest {
     private ShoppingCartClient shoppingCart = new ShoppingCartClient();
 
     private static final List<ItemElement> books = Lists.newArrayList(
