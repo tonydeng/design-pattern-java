@@ -1,6 +1,6 @@
 package com.github.tonydeng.desgin.command.fs.invoker;
 
-import com.github.tonydeng.desgin.command.Command;
+import com.github.tonydeng.desgin.command.fs.command.Command;
 
 /**
  * Created by tonydeng on 15/9/27.

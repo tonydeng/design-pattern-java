@@ -1,6 +1,5 @@
-package com.github.tonydeng.desgin.command.impl;
+package com.github.tonydeng.desgin.command.fs.command;
 
-import com.github.tonydeng.desgin.command.Command;
 import com.github.tonydeng.desgin.command.fs.FileSystemReceiver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
