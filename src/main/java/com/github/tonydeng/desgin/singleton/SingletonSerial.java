@@ -6,18 +6,18 @@ import java.io.Serializable;
 /**
  * Created by tonydeng on 15/10/3.
  */
-public class Singleton implements Serializable {
+public class SingletonSerial implements Serializable {
     private  static final long serialVersionUID = 1l;
 
-    private static Singleton sc = new Singleton();
+    private static SingletonSerial sc = new SingletonSerial();
 
-    private Singleton(){
+    private SingletonSerial(){
         if(sc != null){
             throw new IllegalStateException("Already created.");
         }
     }
 
-    public static Singleton getInstance(){
+    public static SingletonSerial getInstance(){
         return sc;
     }
 
@@ -36,7 +36,7 @@ public class Singleton implements Serializable {
     private  static Class getClass(String className) throws ClassNotFoundException{
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
         if(classLoader == null){
-            classLoader = Singleton.class.getClassLoader();
+            classLoader = SingletonSerial.class.getClassLoader();
         }
 
         return classLoader.loadClass(className);

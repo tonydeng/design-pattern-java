@@ -6,7 +6,7 @@ package com.github.tonydeng.desgin.singleton;
 public class SingletonLazyMultithreaded {
     private static SingletonLazyMultithreaded sc = null;
 
-    private static synchronized SingletonLazyMultithreaded getInstance(){
+    public static synchronized SingletonLazyMultithreaded getInstance(){
         if(sc == null){
             sc = new SingletonLazyMultithreaded();
         }
