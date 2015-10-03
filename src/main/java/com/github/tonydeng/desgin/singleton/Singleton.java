@@ -1,0 +1,44 @@
+package com.github.tonydeng.desgin.singleton;
+
+import java.io.ObjectStreamException;
+import java.io.Serializable;
+
+/**
+ * Created by tonydeng on 15/10/3.
+ */
+public class Singleton implements Serializable {
+    private  static final long serialVersionUID = 1l;
+
+    private static Singleton sc = new Singleton();
+
+    private Singleton(){
+        if(sc != null){
+            throw new IllegalStateException("Already created.");
+        }
+    }
+
+    public static Singleton getInstance(){
+        return sc;
+    }
+
+    private Object readReslove() throws ObjectStreamException{
+        return sc;
+    }
+
+    private Object writeReplace() throws ObjectStreamException{
+        return sc;
+    }
+
+    public  Object clone() throws CloneNotSupportedException{
+        return new CloneNotSupportedException("Singletion, cannot be cloned");
+    }
+
+    private  static Class getClass(String className) throws ClassNotFoundException{
+        ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+        if(classLoader == null){
+            classLoader = Singleton.class.getClassLoader();
+        }
+
+        return classLoader.loadClass(className);
+    }
+}
