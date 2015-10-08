@@ -10,7 +10,7 @@
 ## 结构模式
 
 1. 门面(Facade)模式
-2. 代理(Proxy)模式
+2. [代理(Proxy)模式](docs/proxy.md)
 3. 适配器(Adapter)模式
 4. Composite模式
 5. 装饰器(Decorator)模式
