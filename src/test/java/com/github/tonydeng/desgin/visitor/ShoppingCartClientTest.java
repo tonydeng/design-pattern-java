@@ -19,33 +19,25 @@ public class ShoppingCartClientTest extends BaseTest {
     private ShoppingCartClient shoppingCart = new ShoppingCartClient();
 
     private static final List<ItemElement> books = Lists.newArrayList(
-            new Book(20, "1234"),
-            new Book(100, "5678")
+            new Book(20, "《少有人走的路》"),
+            new Book(100, "《设计模式》")
     );
-
     private static final List<ItemElement> fruits = Lists.newArrayList(
             new Fruit(10, 2, "Banana"),
             new Fruit(5, 5, "Apple")
     );
 
-
     @Test
     public void testBookCalculatePrice() {
-
         int total = shoppingCart.calculatePrice(books);
-
         log.info("books total:{}", total);
-
         Assert.assertTrue("书籍总价计算错误", total == (95 + 20));
     }
 
     @Test
     public void testFruitCalculatePrice() {
-
         int total = shoppingCart.calculatePrice(fruits);
-
         log.info("fruits total:{}", total);
-
         Assert.assertTrue("水果总价计算错误", total == (10 * 2 + 5 * 5));
     }
 
@@ -54,11 +46,8 @@ public class ShoppingCartClientTest extends BaseTest {
         List<ItemElement> items = Lists.newArrayList();
         items.addAll(books);
         items.addAll(fruits);
-
         int total = shoppingCart.calculatePrice(items);
-
         log.info("all items total:{}", total);
-
         Assert.assertTrue("所有商品总价计算错误", total == (95 + 20) + (10 * 2 + 5 * 5));
     }
 }

@@ -1,4 +1,4 @@
-# 访问者（Visitory）模式
+# 访问者（Visitor）模式
 
 ## 访问者模式UML图
 
