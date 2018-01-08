@@ -3,7 +3,7 @@
 ## 创建模式
 
 1. [单例(Singleton)模式](docs/singleton.md)
-2. 工厂(Factory)模式
+2. [工厂(Factory)模式](docs/factory.md)
 2. 原型(Prototype)模式
 4. 构建者(Builder)模式
 
