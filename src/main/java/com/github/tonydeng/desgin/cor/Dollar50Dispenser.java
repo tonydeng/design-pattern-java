@@ -1,4 +1,4 @@
-package com.github.tonydeng.desgin.cof;
+package com.github.tonydeng.desgin.cor;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

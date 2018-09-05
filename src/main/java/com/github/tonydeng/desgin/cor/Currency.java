@@ -1,4 +1,4 @@
-package com.github.tonydeng.desgin.cof;
+package com.github.tonydeng.desgin.cor;
 
 public class Currency {
     private int amount;
