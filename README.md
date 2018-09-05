@@ -23,3 +23,4 @@
 1. [策略(Strategy)模式](docs/strategy.md)
 1. [访问者(Visitor)模式](docs/visitor.md)
 1. [命令(Command)模式](docs/command.md)
+1. [责任链(CoR)模式](docs/cor.md)
