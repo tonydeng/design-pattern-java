@@ -6,7 +6,7 @@ import com.github.tonydeng.desgin.command.fs.command.Command;
  * Created by tonydeng on 15/9/27.
  */
 public class FileInvoker {
-    public Command command;
+    private Command command;
 
     public FileInvoker(Command c){
         this.command = c;
