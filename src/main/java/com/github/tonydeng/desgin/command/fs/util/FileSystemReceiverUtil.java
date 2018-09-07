@@ -12,13 +12,17 @@ import org.slf4j.LoggerFactory;
 public class FileSystemReceiverUtil {
     private static final Logger log = LoggerFactory.getLogger(FileSystemReceiverUtil.class);
 
-    public static FileSystemReceiver getUnderlyingFileSystem(){
+    private FileSystemReceiverUtil() {
+        throw new IllegalStateException("Utility class");
+    }
+
+    public static FileSystemReceiver getUnderlyingFileSystem() {
         String osName = System.getProperty("os.name");
-        if(log.isDebugEnabled())
-            log.debug("Underlying OS is:{}",osName);
-        if(osName.contains("Windows")){
+        if (log.isDebugEnabled())
+            log.debug("Underlying OS is:{}", osName);
+        if (osName.contains("Windows")) {
             return new WindowsFileSystemReceiver();
-        }else {
+        } else {
             return new UnixFileSystemReceiver();
         }
     }
