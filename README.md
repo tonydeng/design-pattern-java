@@ -1,5 +1,11 @@
 # Java设计模式示例
 
+[![Build Status](https://travis-ci.org/tonydeng/design-pattern-java.svg?branch=master)](https://travis-ci.org/tonydeng/design-pattern-java)<br>
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=com.github.tonydeng%3Adesign-pattern-java&metric=coverage)](https://sonarcloud.io/dashboard?id=com.github.tonydeng%3Adesign-pattern-java)<br>
+[![Lines of code](https://sonarcloud.io/api/project_badges/measure?project=com.github.tonydeng%3Adesign-pattern-java&metric=ncloc)](https://sonarcloud.io/dashboard?id=com.github.tonydeng%3Adesign-pattern-java)<br>
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) 
+ 
+
 ## 创建模式
 
 1. [单例(Singleton)模式](docs/singleton.md)
