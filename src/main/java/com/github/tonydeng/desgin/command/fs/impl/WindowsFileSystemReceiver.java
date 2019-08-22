@@ -1,14 +1,13 @@
 package com.github.tonydeng.desgin.command.fs.impl;
 
 import com.github.tonydeng.desgin.command.fs.FileSystemReceiver;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Created by tonydeng on 15/9/27.
  */
+@Slf4j
 public class WindowsFileSystemReceiver implements FileSystemReceiver {
-    private static final Logger log = LoggerFactory.getLogger(WindowsFileSystemReceiver.class);
 
     @Override
     public void openFile() {

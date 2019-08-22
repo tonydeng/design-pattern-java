@@ -1,10 +1,8 @@
 package com.github.tonydeng.desgin.cor;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
+import lombok.extern.slf4j.Slf4j;
+@Slf4j
 public class Dollar10Dispenser implements DispenseChain {
-	private static final Logger log = LoggerFactory.getLogger(Dollar10Dispenser.class);
 	private DispenseChain chain;
 
 	@Override

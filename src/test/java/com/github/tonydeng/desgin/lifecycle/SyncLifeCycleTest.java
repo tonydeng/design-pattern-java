@@ -1,14 +1,11 @@
 package com.github.tonydeng.desgin.lifecycle;
 
-import static org.junit.Assert.*;
+import lombok.extern.slf4j.Slf4j;
+import org.junit.jupiter.api.Test;
 
-import org.junit.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
+@Slf4j
 public class SyncLifeCycleTest {
 
-  private static final Logger log = LoggerFactory.getLogger(SyncLifeCycleTest.class);
   private static SyncLifeCycle syncLifeCycle = new SyncLifeCycle();
 
   @Test

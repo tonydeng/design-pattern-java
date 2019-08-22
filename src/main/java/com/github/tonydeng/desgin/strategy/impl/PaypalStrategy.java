@@ -1,14 +1,13 @@
 package com.github.tonydeng.desgin.strategy.impl;
 
 import com.github.tonydeng.desgin.strategy.PaymentStrategy;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Created by tonydeng on 15/9/27.
  */
+@Slf4j
 public class PaypalStrategy implements PaymentStrategy {
-    private static final Logger log = LoggerFactory.getLogger(PaypalStrategy.class);
 
     private String email;
     private String password;

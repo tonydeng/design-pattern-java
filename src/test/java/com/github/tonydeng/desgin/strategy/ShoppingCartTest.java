@@ -3,11 +3,13 @@ package com.github.tonydeng.desgin.strategy;
 import com.github.tonydeng.desgin.BaseTest;
 import com.github.tonydeng.desgin.strategy.impl.CreaditCardStrategy;
 import com.github.tonydeng.desgin.strategy.impl.PaypalStrategy;
-import org.junit.Test;
+import lombok.extern.slf4j.Slf4j;
+import org.junit.jupiter.api.Test;
 
 /**
  * Created by tonydeng on 15/9/27.
  */
+@Slf4j
 public class ShoppingCartTest extends BaseTest{
 
     @Test

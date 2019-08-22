@@ -2,11 +2,13 @@ package com.github.tonydeng.desgin.state;
 
 import com.github.tonydeng.desgin.BaseTest;
 import com.github.tonydeng.desgin.state.remote.TVRemote;
-import org.junit.Test;
+import lombok.extern.slf4j.Slf4j;
+import org.junit.jupiter.api.Test;
 
 /**
  * Created by tonydeng on 15/9/27.
  */
+@Slf4j
 public class TVRemoteTest extends BaseTest {
 
     @Test

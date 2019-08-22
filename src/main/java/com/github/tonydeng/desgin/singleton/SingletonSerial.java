@@ -29,6 +29,7 @@ public class SingletonSerial implements Serializable {
         return sc;
     }
 
+    @Override
     public  Object clone() throws CloneNotSupportedException{
         return new CloneNotSupportedException("Singletion, cannot be cloned");
     }

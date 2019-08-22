@@ -2,8 +2,9 @@ package com.github.tonydeng.desgin.cor;
 
 import com.github.tonydeng.desgin.BaseTest;
 import com.github.tonydeng.desgin.cor.filter.*;
-import org.junit.Assert;
-import org.junit.Before;
+import org.junit.jupiter.api.BeforeAll;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FilterTest extends BaseTest {
 
@@ -11,7 +12,7 @@ public class FilterTest extends BaseTest {
 
 	private FilterChain chain;
 
-	@Before
+	@BeforeAll
 	public void init() {
 		chain = new FilterChain();
 		chain.addFilter(new HtmlFilter());
@@ -26,8 +27,8 @@ public class FilterTest extends BaseTest {
 
 		chain.doFilter(request, response);
 
-		Assert.assertEquals("response", response.getRespStr());
+		assertEquals("response", response.getRespStr());
 
-		Assert.assertEquals("就业了：），信息，&ltscript&gt", request.getReqStr());
+		assertEquals("就业了：），信息，&ltscript&gt", request.getReqStr());
 	}
 }

@@ -4,7 +4,8 @@ import com.github.tonydeng.desgin.BaseTest;
 import com.github.tonydeng.desgin.singleton.*;
 import com.google.common.base.Stopwatch;
 import com.google.common.collect.Sets;
-import org.junit.Test;
+import lombok.extern.slf4j.Slf4j;
+import org.junit.jupiter.api.Test;
 
 import java.util.Set;
 import java.util.concurrent.ExecutorService;
@@ -14,6 +15,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * Created by tonydeng on 15/10/3.
  */
+@Slf4j
 public class SingletonTest extends BaseTest {
     private static final int THREAD_POOL_NUM=20;
     private static final int LOOP_NUM = 100000;
