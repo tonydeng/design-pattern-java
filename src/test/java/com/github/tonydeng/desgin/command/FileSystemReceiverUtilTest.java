@@ -3,7 +3,7 @@ package com.github.tonydeng.desgin.command;
 import com.github.tonydeng.desgin.BaseTest;
 import com.github.tonydeng.desgin.command.fs.FileSystemReceiver;
 import com.github.tonydeng.desgin.command.fs.util.FileSystemReceiverUtil;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * Created by tonydeng on 15/9/27.

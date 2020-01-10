@@ -2,7 +2,7 @@ package com.github.tonydeng.desgin.command;
 
 import com.github.tonydeng.desgin.BaseTest;
 import com.github.tonydeng.desgin.command.fs.client.FileSystemClient;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * Created by tonydeng on 15/9/27.

@@ -4,7 +4,7 @@ import com.github.tonydeng.desgin.BaseTest;
 import com.github.tonydeng.desgin.singleton.*;
 import com.google.common.base.Stopwatch;
 import com.google.common.collect.Sets;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.Set;
 import java.util.concurrent.ExecutorService;
