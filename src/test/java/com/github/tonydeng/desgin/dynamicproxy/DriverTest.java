@@ -11,12 +11,22 @@ import org.junit.jupiter.api.Test;
 public class DriverTest {
     @Test
     void testGetName() {
-        log.info("{}", new DiskDriver().getName());
-        log.info("{}", new NetworkDriver().getName());
+        log.info("{}", new DiskDriver(new Target()).getType());
+        log.info("{}", new NetworkDriver(new Target()).getType());
     }
 
     @Test
     void testNetwork() {
-        log.info("{}", new DriverProxy().iface(NetworkDriver.class).GetIp());
+        DriverProxy proxy = new DriverProxy();
+        Target target = new Target("Network");
+        NetworkDriver driver = proxy.iface(NetworkDriver.class, target);
+        log.info("{} {}", driver.getClass().getName(), driver.getClass().getSimpleName());
+
+        proxy.iface(NetworkDriver.class, target);
+        proxy.iface(NetworkDriver.class, target);
+
+        proxy.iface(DiskDriver.class,new Target("Disk"));
+        proxy.iface(DiskDriver.class,new Target("Disk"));
+        proxy.iface(DiskDriver.class,new Target("Disk"));
     }
 }

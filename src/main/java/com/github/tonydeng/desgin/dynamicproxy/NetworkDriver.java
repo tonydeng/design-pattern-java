@@ -7,6 +7,17 @@ package com.github.tonydeng.desgin.dynamicproxy;
  * @date 2020/1/11 00:00
  **/
 public class NetworkDriver implements Driver {
+    private Target target;
+
+    public NetworkDriver(Target target) {
+        this.target = target;
+    }
+
+    @Override
+    public Target getTarget() {
+        return target;
+    }
+
     /**
      * 获取类型
      *
@@ -14,7 +25,7 @@ public class NetworkDriver implements Driver {
      */
     @Override
     public String getType() {
-        return "Network";
+        return target.getName();
     }
 
     public String GetIp() {

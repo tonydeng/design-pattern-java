@@ -10,10 +10,21 @@ import lombok.extern.slf4j.Slf4j;
  **/
 @Slf4j
 public class DiskDriver implements Driver {
+    private Target target;
+
+    public DiskDriver(Target target) {
+        this.target = target;
+    }
+
+    @Override
+    public Target getTarget() {
+        return target;
+    }
+
     @Override
     public String getType() {
         log.info("get disk driver type......");
-        return "Disk";
+        return target.getName();
     }
 
     /**
