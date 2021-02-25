@@ -15,12 +15,17 @@
     </scm>
 
     <properties>
+        <!-- java env-->
+        <java.version>11</java.version>
+        <env.encoding>UTF-8</env.encoding>
+        <maven.version>3.6.0</maven.version>
+
         <junit-jupiter.version>5.5.2</junit-jupiter.version>
         <junit-platform.version>1.5.2</junit-platform.version>
         <logback.version>1.2.3</logback.version>
         <slf4j.version>1.7.30</slf4j.version>
-        <lombok.version>1.18.10</lombok.version>
-        <guava.version>28.1-jre</guava.version>
+        <lombok.version>1.18.16</lombok.version>
+        <guava.version>30.1-jre</guava.version>
         <javassist.version>3.12.0.GA</javassist.version>
     </properties>
     <dependencies>
@@ -62,11 +67,39 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.1</version>
+                <version>3.8.1</version>
                 <configuration>
-                    <target>1.8</target>
-                    <source>1.8</source>
-                    <encoding>utf-8</encoding>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>${env.encoding}</encoding>
+                    <compilerArgs>
+                        <arg>--add-exports=java.net.http/jdk.internal.net.http.common=ALL-UNNAMED</arg>
+                        <arg>--add-opens=java.net.http/jdk.internal.net.http.common=ALL-UNNAMED</arg>
+                    </compilerArgs>
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                            <version>${lombok.version}</version>
+                        </path>
+                    </annotationProcessorPaths>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M4</version>
+                <configuration>
+                    <argLine>surefireArgLine</argLine>
+                    <includes>
+                        <include>**/Test*.java</include>
+                        <include>**/*Test.java</include>
+                        <include>**/*Tests.java</include>
+                        <include>**/*TestCase.java</include>
+                    </includes>
+                    <properties>
+                        <excludeTags>slow</excludeTags>
+                    </properties>
                 </configuration>
             </plugin>
 
