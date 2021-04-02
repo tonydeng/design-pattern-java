@@ -2,7 +2,7 @@ dist: trusty
 sudo: required
 language: java
 jdk:
-  - oraclejdk8
+  - oraclejdk11
 
 addons:
   sonarcloud:
